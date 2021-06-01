@@ -48,4 +48,7 @@ Mainstream job seeking applications like Indeed, LinkedIn and ZipRecruiter have 
 
 <img src="public/Screen Shot 2021-06-01 at 4.45.04 PM.png">
 
+## Future features or unresolved problems
+
+Work in progress...
 

@@ -1,5 +1,9 @@
 # README
 
+## Scope
+
+Mainstream job seeking applications like Indeed, LinkedIn and ZipRecruiter have a broad spectrum of jobs and job seekers. InTech aims to create an ecosystem of job-seeking software engineers and the businesses that need them.  InTech is specifically designed to cater to the skillsets of software engineers and to pair those skills to companies that need them.  This is a Software Engineer's delight!  
+
 ## User Stories
 
 ### Who, What, Why

@@ -2,7 +2,7 @@
 
 ## User Stories
 
-##### Who, What, Why
+### Who, What, Why
 
 **Who are my users**: My target audience are software engineers (junior, associate or senior) that are looking for their next career opportunity.  I have found that traditional job search websites have to include a wide demographic of users.  I want a service that is solely dedicated to Software Engineers and companies that are looking for them.  
 
@@ -10,11 +10,11 @@
 
 **Why**: I am a software engineer and I have found that the quality of mainstream job searching websites did not cater enough to my skill set and search queries.  For example, I’d like to check in what skills I have, how long I have had them, and then be able to search for companies that match exactly what I have to offer.  I want to find companies that are looking for exactly what I have offer.The Software Engineering workforce stood at over 680,000 workers in the field in the United States.  
 
-##### 1.2 - Sign Up 
+### 1.2 - Sign Up 
 
 **Sign up**:  A new user can sign up to the website by entering pertinent information such as Full Name, Username, Picking a password, etc.  
 
-##### 1.3 - Profile Page
+### 1.3 - Profile Page
 
 **Profile Page** Once the user is signed in, they can immediately see jobs that are available.  On the left navigation bar, they are able to sort through the jobs by using selectors located in the left navigation bar.  
 

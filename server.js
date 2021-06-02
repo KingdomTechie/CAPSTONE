@@ -13,6 +13,7 @@ const app = express();
 // use the env port OR the port 4000
 const PORT = process.env.PORT || 4000;
 
+// EJS is the view engine.  Will need it for views
 app.set("view engine", "ejs");
 
 /* ==== Middleware ==== */
@@ -39,8 +40,6 @@ app.use(function (req, res, next) {
 app.get("/", function (req, res) {
   res.render("home");
 });
-
-
 
 /* ==== Server Listener ==== */
 app.listen(PORT, function () {

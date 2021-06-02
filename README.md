@@ -13,6 +13,8 @@ Mainstream job seeking applications like Indeed, LinkedIn and ZipRecruiter have 
 
 ## Install these dependencies
 
+Run npm init and git init. 
+
 - Mongoose
 - Express
 - Nodemon

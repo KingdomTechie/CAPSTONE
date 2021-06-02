@@ -18,6 +18,11 @@ mongoose
 
     mongoose.connection.on("disconnected", function () {
         console.log("MongoDB disconnected");
-    })
+    });
+
+
+module.exports = {
+    User: require("./User")
+}
 
 

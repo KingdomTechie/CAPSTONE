@@ -28,7 +28,7 @@ app.use(methodOverride("_method"));
 
 // middleware to serve public as static files
 
-// all controller functions take in req,res,next
+// Logger Middleware - Helper tool
 app.use(function (req, res, next) {
   console.log(`${req.method} - ${req.url}`);
   console.log(req.session);
@@ -45,7 +45,6 @@ app.use(session({
     cooke: {
         maxAge: 1000 * 60 * 60 * 24 * 7 // One week cookie age
     }
-
 }))
 
 /* ==== Routes/Controllers ==== */
@@ -55,7 +54,7 @@ app.get("/", function (req, res) {
   res.render("home");
 });
 
-app.use("/users", controllers.users)
+app.use("/", controllers.auth)
 
 /* ==== Server Listener ==== */
 app.listen(PORT, function () {

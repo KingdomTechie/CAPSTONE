@@ -17,7 +17,8 @@ const userSchema = new mongoose.Schema (
         desiredLocation: String,
         profileImg: String,
         bio: String,
-        jobStatus: String
+        jobStatus: String,
+        educationStatus: String,
     }
 )
 

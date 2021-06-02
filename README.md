@@ -21,6 +21,12 @@ Run npm init and git init.
 - Method Override
 - EJS
 
+# User Authentication and Authorization 
+
+- express-session
+- connect-mongo
+- bcryptjs
+
 
 ## User Stories
 

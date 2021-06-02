@@ -41,7 +41,9 @@ app.get("/", function (req, res) {
   res.render("home");
 });
 
+app.use("/users", controllers.users)
+
 /* ==== Server Listener ==== */
 app.listen(PORT, function () {
-  console.log(`Blog application is live at http://localhost:${PORT}/`);
+  console.log(`InTech application is live at http://localhost:${PORT}/`);
 });

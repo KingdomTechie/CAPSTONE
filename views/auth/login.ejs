@@ -1,7 +1,24 @@
 <%- include("../partials/header.ejs"); %>
 
 <html>
-    <body>
-        <h1>Login</h1>
+    <body><%- include("../partials/header.ejs"); %>
+
+        <html>
+            <body>
+        
+                <h1>Login</h1>
+        
+                <form action="/login" method="POST">
+                    <h3></h3>
+                
+                    <p><input type="text" name="email" placeholder="Email"></p>
+                    <p><input type="password" name="password" placeholder="Password"></p>
+        
+                    <input type="submit" value="Log In">
+                    
+        
+                </form>
+            </body>
+        </html><h1>Login</h1>
     </body>
 </html>

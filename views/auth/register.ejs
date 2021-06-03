@@ -1,0 +1,21 @@
+<%- include("../partials/header.ejs"); %>
+
+<html>
+    <body>
+
+        <h1>Register for an account</h1>
+
+        <form action="/register" method="POST">
+            <h3></h3>
+            <p><input type="text" name="firstName" placeholder="First Name"></p>
+            <p><input type="text" name="lastName" placeholder="Last Name"></p>
+            <p><input type="text" name="username" placeholder="Username"></p>
+            <p><input type="text" name="email" placeholder="Email"></p>
+            <p><input type="password" name="password" placeholder="Password"></p>
+
+            <input type="submit" value="Register">
+            
+
+        </form>
+    </body>
+</html>

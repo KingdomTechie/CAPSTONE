@@ -10,13 +10,35 @@ GET - /login Pres.
 POST - /login Func
 */
 
-router.get("/register", function(req, res) {});
+router.get("/register", function(req, res) {
+    res.render("auth/register")
+});
 
-router.post("/register", function(req, res) {});
+router.post("/register", async function(req, res) {
+    const foundUser = await db.User.findOne({email: req.body.email})
 
-router.get("/login", function(req, res) {});
+    try {
+    if (foundUser) {
+        return res.redirect("/login")
+    }
 
-router.post("/login", function(req, res) {});
+    const newUser = await db.User.create(req.body)
+    return res.redirect("/login")
+
+    } catch(err) {
+        console.log(err);
+        return res.send(err)
+    }
+});
+
+
+router.get("/login", function(req, res) {
+    res.render("login")
+});
+
+router.post("/login", function(req, res) {
+    
+});
 
 module.exports = router;
 

@@ -16,7 +16,7 @@ const userSchema = new mongoose.Schema (
         bio: String,
         jobStatus: String,
         educationStatus: String,
-        // skills: ["String"],
+        skills: [],
     },
     {
         timestamps: true,

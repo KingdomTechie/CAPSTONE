@@ -43,8 +43,28 @@ router.get("/login", function(req, res) {
     res.render("auth/login")
 });
 
-router.post("/login", function(req, res) {
-    res.send(req.body)
+router.post("/login", async function(req, res) {
+
+    try {
+    const foundUser = await db.User.findOne({email: req.body.email})
+
+    if(!foundUser) return res.redirect("/register");
+
+    const doesMatch = await bcrypt.compare(req.body.password, foundUser.password);
+
+    if (!doesMatch) return res.send("Password invalid")
+
+    req.session.currentUser = {
+        id: foundUser._id,
+        username: foundUser.username
+    }
+
+    return res.redirect("/")
+    } catch(err) {
+        console.log(err);
+        res.send(err)
+    }
+    
 });
 
 module.exports = router;

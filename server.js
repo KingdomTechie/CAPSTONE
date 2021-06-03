@@ -30,23 +30,24 @@ app.use(methodOverride("_method"));
 // middleware to serve public as static files
 
 // Logger Middleware - Helper tool
-app.use(function (req, res, next) {
-  console.log(`${req.method} - ${req.url}`);
-  console.log(req.session);
-  // we use next in routes to tell express to move on to the next route in order
-  next();
-});
+
 
 // Session middleware
 app.use(session({
-    store: MongoStore.create({mongoUrl: "mongodb://localhost/intech"}),
-    secret: "Super Secret Waffles",
-    reseave: false,
-    saveUninitialized: false,
-    cooke: {
-        maxAge: 1000 * 60 * 60 * 24 * 7 // One week cookie age
-    }
+  store: MongoStore.create({mongoUrl: "mongodb://localhost:27017/intech"}),
+  secret: "Super Secret Waffles",
+  reseave: false,
+  saveUninitialized: false,
+  cooke: {
+    maxAge: 1000 * 60 * 60 * 24 * 7 // One week cookie age
+  }
 }))
+
+app.use(function (req, res, next) {
+  console.log(req.session);
+  console.log(`${req.method} - ${req.url}`);
+  next();
+});
 
 /* ==== Routes/Controllers ==== */
 

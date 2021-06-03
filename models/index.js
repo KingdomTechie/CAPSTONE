@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
-const dbUrl = "mongodb://localhost:27017/intech";
+require("dotenv").config()
+const dbUrl = process.env.MONGODB_URI //"mongodb://localhost:27017/intech";
 
 mongoose
     .connect(dbUrl, {
@@ -23,7 +24,8 @@ mongoose
 
 module.exports = {
     User: require("./User"),
-    UserProfile: require("./UserProfile")
+    UserProfile: require("./UserProfile"),
+    JobListings: require("./JobListings")
 }
 
 

@@ -57,6 +57,8 @@ app.get("/", function (req, res) {
 
 app.use("/", controllers.auth)
 
+app.use("/profile", controllers.userProfile)
+
 /* ==== Server Listener ==== */
 app.listen(PORT, function () {
   console.log(`InTech application is live at http://localhost:${PORT}/`);

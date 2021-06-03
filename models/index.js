@@ -25,7 +25,8 @@ mongoose
 module.exports = {
     User: require("./User"),
     UserProfile: require("./UserProfile"),
-    JobListings: require("./JobListings")
+    JobListings: require("./JobListings"),
+    Company: require("./Company")
 }
 
 

@@ -22,7 +22,8 @@ mongoose
 
 
 module.exports = {
-    User: require("./User")
+    User: require("./User"),
+    UserProfile: require("./UserProfile")
 }
 
 

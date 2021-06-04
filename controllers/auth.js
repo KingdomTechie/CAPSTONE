@@ -53,6 +53,8 @@ router.get("/login", function(req, res) {
 
 router.post("/login", async function(req, res) {
 
+    const context = await db.User.findOne
+
     try {
     const foundUser = await db.User.findOne({email: req.body.email})
     if(!foundUser) return res.redirect("/register");

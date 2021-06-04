@@ -2,15 +2,111 @@
 
 <html>
     <body>
-        <h1>Home Page</h1>
+        <!-- <h1>Home Page</h1> -->
         <% if (user) { %>
-            <h4>Welcome <%= user.username %></h4>
-
-            <div class="profile_card">This is a small user profile card</div>
+            <h2>Welcome <%= user.username %></h2>
+            <div class="profile_page">
+            <aside class="user_aside">
+                <div class="profile_card">
+                    <div class="card" style="width: 18rem;">
+                        <!-- <img src="..." class="card-img-top" alt="..."> -->
+                        <!-- <div class="card-body">
+                          <h5 class="card-title">User Profile Card</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div> -->
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Skills</li>
+                          <li class="list-group-item">Location</li>
+                          <li class="list-group-item">Salary</li>
+                          <li class="list-group-item">Preferred Industry</li>
+                        </ul>
+                        <div class="card-body">
+                          <a href="#" class="card-link">Card link</a>
+                          <a href="#" class="card-link">Another link</a>
+                        </div>
+                      </div>
+                    
+                </div>
+            </aside>
+            <section class="joblisting_grid">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Full Stack Developer</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Tapcart</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Junior Software Engineer</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Amazon</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </section>
+            <!-- <section class="joblisting_grid">
+                <div class="joblisting_card">
+                    <h4>This is where Job listings will go</h4>
+                </div>
+                <div class="joblisting_card">
+                    <h4>This is where Job listings will go</h4>
+                </div>
+                <div class="joblisting_card">
+                    <h4>This is where Job listings will go</h4>
+                </div>
+                <div class="joblisting_card">
+                    <h4>This is where Job listings will go</h4>
+                </div>
+                <div class="joblisting_card">
+                    <h4>This is where Job listings will go</h4>
+                </div>
+                <div class="joblisting_card">
+                    <h4>This is where Job listings will go</h4>
+                </div>
+            </section> -->
+        </div>
       <% } else { %>
-            <div>
-
-            </div>
+        <h2>Welcome!</h2>
             <a href="/login">Login</a>
             <a href="/register">Register</a>
        <% } %>

@@ -1,9 +1,6 @@
 * {
 	box-sizing: border-box;
 }
-body {
-    /* margin-left: auto; */
-}
 
 h2 {
     padding: 10px;
@@ -49,6 +46,14 @@ Register View
 }
 
 /* ------------------------------- 
+Homepage View if user not signed in
+---------------------------------*/
+.welcome_div {
+    padding: 10px;
+}
+
+
+/* ------------------------------- 
 Homepage View if user is signed in
 ---------------------------------*/
 
@@ -58,6 +63,10 @@ Homepage View if user is signed in
 
 .profile_card h4{
     padding: 5px;
+}
+
+.list-group h5 {
+    margin-left: 3px;
 }
 
 .profile_card {

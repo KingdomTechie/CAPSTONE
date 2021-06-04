@@ -5,6 +5,7 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo")
 const bcrypt = require("bcryptjs");
 require("dotenv").config();
+const db = require("./models")
 
 /* ==== Internal Modules ==== */
 const controllers = require("./controllers");
@@ -67,14 +68,27 @@ app.use(function (req, res, next) {
 /* ==== Routes/Controllers ==== */
 
 // Home routes
-app.get("/", function (req, res) {
-  const context = {user: req.session.currentUser}
+app.get("/", async function (req, res) {
+
+  const foundUser = await db.User.findOne({})
+  const foundCompanies = await db.Company.find({})
+  const foundjobListings = await db.JobListings.find({})
+  const context = {
+                    user: req.session.currentUser,
+                    profile: foundUser,
+                    companies: foundCompanies,
+                    joblistings: foundjobListings
+                  }
+  console.log(req.session);
+  // console.log(context.company);
   res.render("home", context);
 });
 
 app.use("/", controllers.auth)
 
-app.use("/profile", authRequired, controllers.userProfile)
+app.use("/edit", function (req, res) {
+  res.render("edit")
+})
 
 /* ==== Server Listener ==== */
 app.listen(PORT, function () {

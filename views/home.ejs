@@ -15,20 +15,37 @@
                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div> -->
                         <ul class="list-group list-group-flush">
-                          <li class="list-group-item">Skills</li>
-                          <li class="list-group-item">Location</li>
-                          <li class="list-group-item">Salary</li>
-                          <li class="list-group-item">Preferred Industry</li>
+                            <h5>Skills</h5>
+                          <li class="list-group-item"><%=profile.skills%></li>
+                          <h5>Location</h5>
+                          <li class="list-group-item"><%=profile.desiredCity%></li>
+                          <h5>Salary</h5>
+                          <li class="list-group-item"><%=profile.desiredSalary%></li>
+                          <h5>Industry</h5>
+                          <li class="list-group-item"><%=profile.desiredIndustry%></li>
                         </ul>
                         <div class="card-body">
                           <a href="#" class="card-link">Card link</a>
-                          <a href="#" class="card-link">Another link</a>
+                          <a href="/edit" class="card-link">Edit Profile</a>
                         </div>
                       </div>
                     
                 </div>
             </aside>
             <section class="joblisting_grid">
+                <div class="card" style="width: 18rem;">
+
+                  <%  for (let i=0; i < joblistings.length; i++) { %>
+                    <div class="card-body">
+                        <h5 class="card-title"><%=joblistings[i].jobTitle%></h5>
+                        <h6 class="card-subtitle mb-2 text-muted"><%=companies[0].companyName%></h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                      </div>
+                   <% } %>
+                    
+                  </div>
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
                   <h5 class="card-title">Full Stack Developer</h5>
@@ -49,8 +66,8 @@
               </div>
               <div class="card" style="width: 18rem;">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                  <h5 class="card-title">Junior Backend Developer</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Activison</h6>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   <a href="#" class="card-link">Card link</a>
                   <a href="#" class="card-link">Another link</a>
@@ -107,8 +124,10 @@
         </div>
       <% } else { %>
         <h2>Welcome!</h2>
-            <a href="/login">Login</a>
-            <a href="/register">Register</a>
+            <div class="welcome_div">
+                <a href="/login">Login</a><br>
+                <a href="/register">Register</a>
+            </div>
        <% } %>
     </body>
 </html>

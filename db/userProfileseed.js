@@ -7,12 +7,7 @@ const user = [{
         email: "brookevelez@gmail.com",
         password: "12345",
         username: "bk", unique: true,
-        profile: ""
-},
-]
-
-
-const profile = [{
+        profile: "",
         desiredSalary: 70000,
         desiredIndustry: "Ecommerce",
         remote: true,
@@ -22,9 +17,10 @@ const profile = [{
         bio: "I am a Junior Software Engineer",
         jobStatus: "Full-time",
         educationStatus: "Bootcamp",
-        skills: ["JavaScript","Mongoose","Express","MongoDB"],
-        user: {type: mongoose.Schema.Types.ObjectId, ref: "User"}
-}]
+        skills: ["JavaScript, Mongoose, Express, MongoDB"],
+},
+]
+
 
 
 
@@ -32,19 +28,9 @@ const profile = [{
 const run = async () => {
     
     try {
-        await db.Company.deleteMany({});
-        const createdCompany = await db.Company.insertMany(company);
-        console.log({createdCompany});
-
-        await db.JobListings.deleteMany({});
-        
-        
-        for(joblisting of jobListings) {
-            const foundCompany = await db.Company.findOne({companyName: joblisting.company});
-            joblisting.company = foundCompany;
-            const createdJoblisting = await db.JobListings.create(joblisting)
-            console.log(createdJoblisting);
-        }
+        await db.User.deleteMany({});
+        const createdUser = await db.User.insertMany(user);
+        console.log({createdUser});
         process.exit();
 
     } catch(err) {

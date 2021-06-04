@@ -17,7 +17,7 @@ const userSchema = new mongoose.Schema (
         bio: String,
         jobStatus: String,
         educationStatus: String,
-        skills: [],
+        skills: []
     },
     {
         timestamps: true,
@@ -28,3 +28,5 @@ const userSchema = new mongoose.Schema (
 const User = mongoose.model("User", userSchema);
 
 module.exports = User;
+
+{ $split: [ "Hello World", " " ] }

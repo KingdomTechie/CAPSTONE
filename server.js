@@ -70,17 +70,28 @@ app.use(function (req, res, next) {
 // Home routes
 app.get("/", async function (req, res) {
 
-  const foundUser = await db.User.findOne({})
+  const foundUser = await db.User.find()
   const foundCompanies = await db.Company.find({})
   const foundjobListings = await db.JobListings.find({})
+
+  for (let i = 0; i < foundUser.length; i++) {
+
+    // console.log(foundUser[i]._id, foundUser[i].username);
+    // console.log(req.session.currentUser.id, req.session.currentUser);
+
+    if (foundUser[i]._id == req.session.currentUser.id) {
+      newFoundUser = foundUser[i]
+      console.log(newFoundUser);
+    }
+  }
   const context = {
-                    user: req.session.currentUser,
-                    profile: foundUser,
-                    companies: foundCompanies,
-                    joblistings: foundjobListings
-                  }
-  console.log(req.session);
-  // console.log(context.company);
+        user: req.session.currentUser,
+        profile: newFoundUser,
+        companies: foundCompanies,
+        joblistings: foundjobListings
+      }
+
+
   res.render("home", context);
 });
 

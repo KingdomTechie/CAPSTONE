@@ -101,3 +101,7 @@ Homepage View if user is signed in
     color: white;
     /* position: absolute; */
 }
+
+.card_link_div {
+    margin-top: 10px;
+}

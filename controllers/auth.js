@@ -9,6 +9,7 @@ POST -/register Func.
 
 GET - /login Pres.
 POST - /login Func.
+DELETE - /logout Func.
 */
 
 router.get("/register", function(req, res) {
@@ -66,6 +67,12 @@ router.post("/login", async function(req, res) {
     }
     
 });
+
+router.delete("/logout", async function (req, res) {
+
+        await req.session.destroy()
+        return res.redirect("/login")
+})
 
 module.exports = router;
 

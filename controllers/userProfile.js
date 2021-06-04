@@ -4,7 +4,7 @@ const db = require("../models");
 
 
 router.get("/", function (req, res){
-    return res.render("profile")
+    return res.render("profile/profile")
 })
 
 

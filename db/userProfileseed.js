@@ -2,21 +2,28 @@ const db = require("../models")
 
 
 const user = [{
-    companyName: "Facebook",
-    companyImg: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fencrypted-tbn1.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcRAiNZzQqw5hwaWyZX3-KPG5gBHcMkjqPB6KtIakiiY56snwjgt&psig=AOvVaw2Jw2hgefNTzmhoaVoUKKtx&ust=1622849428860000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLCtt6_P_PACFQAAAAAdAAAAABAD",
-    companyBio: "Facebook, Inc., is an American multinational technology conglomerate based in Menlo Park, California."
+        firstName: "Brooke",
+        lastName: "Velez",
+        email: "brookevelez@gmail.com",
+        password: "12345",
+        username: "bk", unique: true,
+        profile: ""
 },
 ]
 
 
 const profile = [{
-    salaryMinRange: 70000,
-    salaryMaxRange: 100000,
-    jobTitle: "Junior Software Developer",
-    requiredSkills: ["JavaScript", "Node.js", "Express.js"],
-    postionStatus: "Full-time",
-    remote: true,
-    company: "Facebook",
+        desiredSalary: 70000,
+        desiredIndustry: "Ecommerce",
+        remote: true,
+        desiredCity: "Los Angeles",
+        desiredState: "California",
+        profileImg: "",
+        bio: "I am a Junior Software Engineer",
+        jobStatus: "Full-time",
+        educationStatus: "Bootcamp",
+        skills: ["JavaScript","Mongoose","Express","MongoDB"],
+        user: {type: mongoose.Schema.Types.ObjectId, ref: "User"}
 }]
 
 

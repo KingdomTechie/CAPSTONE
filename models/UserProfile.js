@@ -12,6 +12,7 @@ const userProfileSchema = new mongoose.Schema (
         jobStatus: String,
         educationStatus: String,
         skills: [],
+        user: {type: mongoose.Schema.Types.ObjectId, ref: "User"}
     },
     {
         timestamps: true,

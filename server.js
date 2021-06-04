@@ -30,9 +30,6 @@ app.use(methodOverride("_method"));
 
 // middleware to serve public as static files
 
-// Logger Middleware - Helper tool
-
-
 // Session middleware
 app.use(session({
   store: MongoStore.create({mongoUrl: "mongodb://localhost:27017/intech"}),
@@ -44,6 +41,21 @@ app.use(session({
   }
 }))
 
+// this adds user credentials to all ejs files
+app.use(function (req, res, next) {
+  app.locals.user = req.session.currentUser;
+  next()
+})
+
+// authRequried middleware
+const authRequired = function (req, res, next) {
+  if(req.session.currentUser) {
+    return next()
+  }
+  return res.redirect("/login")
+}
+
+// Logger Middleware - Helper tool
 app.use(function (req, res, next) {
   console.log(req.session);
   console.log(`${req.method} - ${req.url}`);
@@ -54,12 +66,13 @@ app.use(function (req, res, next) {
 
 // Home routes
 app.get("/", function (req, res) {
-  res.render("home");
+  const context = {user: req.session.currentUser}
+  res.render("home", context);
 });
 
 app.use("/", controllers.auth)
 
-app.use("/profile", controllers.userProfile)
+app.use("/profile", authRequired, controllers.userProfile)
 
 /* ==== Server Listener ==== */
 app.listen(PORT, function () {

@@ -3,5 +3,12 @@
 <html>
     <body>
         <h1>Home Page</h1>
+        <% if (user) { %>
+            <h4>Welcome <%= user.username %></h4>
+
+      <% } else { %>
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+       <% } %>
     </body>
 </html>

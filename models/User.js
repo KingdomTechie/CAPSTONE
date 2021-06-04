@@ -8,15 +8,7 @@ const userSchema = new mongoose.Schema (
         email: {type: String, required: [true, "Must provide a valid email"]},
         password: {type: String, required: [true, "Must provide a valid email"]},
         username: {type: String, required: [true, "You must enter a username"], unique: true},
-        desiredSalary: Number,
-        desiredIndustry: String,
-        remote: Boolean,
-        desiredLocation: String,
-        profileImg: String,
-        bio: String,
-        jobStatus: String,
-        educationStatus: String,
-        skills: [],
+        profile: {type: mongoose.Schema.Types.ObjectId, ref: "UserProfile"}
     },
     {
         timestamps: true,

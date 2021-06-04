@@ -1,17 +1,15 @@
 const db = require("../models")
 
 
-const company = [{
+const user = [{
     companyName: "Facebook",
-
     companyImg: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fencrypted-tbn1.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcRAiNZzQqw5hwaWyZX3-KPG5gBHcMkjqPB6KtIakiiY56snwjgt&psig=AOvVaw2Jw2hgefNTzmhoaVoUKKtx&ust=1622849428860000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLCtt6_P_PACFQAAAAAdAAAAABAD",
-
     companyBio: "Facebook, Inc., is an American multinational technology conglomerate based in Menlo Park, California."
 },
 ]
 
 
-const jobListings = [{
+const profile = [{
     salaryMinRange: 70000,
     salaryMaxRange: 100000,
     jobTitle: "Junior Software Developer",

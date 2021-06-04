@@ -67,6 +67,8 @@ app.use(function (req, res, next) {
 
 /* ==== Routes/Controllers ==== */
 
+app.use("/", controllers.auth)
+
 // Home routes
 app.get("/", async function (req, res) {
 
@@ -76,13 +78,11 @@ app.get("/", async function (req, res) {
 
   for (let i = 0; i < foundUser.length; i++) {
 
-    // console.log(foundUser[i]._id, foundUser[i].username);
-    // console.log(req.session.currentUser.id, req.session.currentUser);
-
     if (foundUser[i]._id == req.session.currentUser.id) {
       newFoundUser = foundUser[i]
       console.log(newFoundUser);
     }
+
   }
   const context = {
         user: req.session.currentUser,
@@ -90,16 +90,22 @@ app.get("/", async function (req, res) {
         companies: foundCompanies,
         joblistings: foundjobListings
       }
-
-
   res.render("home", context);
 });
 
-app.use("/", controllers.auth)
 
-app.use("/edit", function (req, res) {
-  res.render("edit")
+app.use("/:id/edit", async function (req, res) {
+  
+  await db.User.findById(req.params.id, function (err, foundUser) {
+    if (err) return res.send(err)
+
+    const context = {user: foundUser}
+    console.log(foundUser);
+    return res.render("edit", context)
+  })
+
 })
+
 
 /* ==== Server Listener ==== */
 app.listen(PORT, function () {

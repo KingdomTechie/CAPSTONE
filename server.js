@@ -22,6 +22,8 @@ app.set("view engine", "ejs");
 
 /* ==== Middleware ==== */
 
+// Public folder middleware
+app.use(express.static(__dirname + "/public"));
 // body data middleware
 app.use(express.urlencoded({ extended: true }));
 

@@ -4,16 +4,15 @@
     <body>
         <h1><%= user.username %>'s' Profile Page</h1>
 
-        <div>
+        <div class="profile_edit_form">
             <form action="/profile" method="POST">
-                
+                <p><input type="text" name="desiredSalary" placeholder="Desired Salary"></p>
+                <p><input type="text" name="desiredIndustry" placeholder="Desired Industry"></p>
+                <p><input type="text" name="bio" placeholder="Brand Statement"></p>
+                <p><input type="text" name="skills" placeholder="Skills"></p>
+                <input type="submit" value="submit">
             </form>
         </div>
 
-        <div>
-            <form action="/logout?_method=DELETE" method="POST">
-                <input type="submit" value="Logout">
-            </form>
-        </div>
     </body>
 </html>

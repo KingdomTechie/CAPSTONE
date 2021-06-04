@@ -7,6 +7,11 @@
 }
 
 .register_form {
-    margin-left: 500px;
+    /* display: flex; */
     max-width: 500px;
+}
+
+.register_right {
+    position: absolute;
+    margin-left: 500px;
 }

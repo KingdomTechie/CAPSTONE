@@ -19,6 +19,14 @@ nav {
 }
 
 /* ---------- 
+Log in View
+--------------*/
+
+.login_form {
+    padding: 10px;
+}
+
+/* ---------- 
 Register View
 --------------*/
 .register_form_div {

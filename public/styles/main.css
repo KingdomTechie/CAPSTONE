@@ -85,7 +85,8 @@ Homepage View if user is signed in
 }
 
 .list-group h5 {
-    margin-left: 3px;
+    margin-left: 0px;
+    padding: 10px;
 }
 
 .profile_card {
@@ -128,4 +129,8 @@ Homepage View if user is signed in
 .company_card_photo {
     max-width: 100%;
     margin-bottom: 10px;
+}
+
+.company_card_photo_div {
+    margin-bottom: 20px;
 }

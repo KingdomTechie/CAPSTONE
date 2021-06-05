@@ -13,7 +13,9 @@ const controllers = require("./controllers");
 /* ==== Instanced Modules ==== */
 const app = express();
 
-/* ==== Configuration ==== */
+/* =========================== 
+         Configuration
+==============================*/
 
 // use the env port OR the port 4000
 const PORT = process.env.PORT || 4000;
@@ -21,17 +23,18 @@ const PORT = process.env.PORT || 4000;
 // EJS is the view engine.  Will need it for views
 app.set("view engine", "ejs");
 
-/* ==== Middleware ==== */
+/* =========================== 
+         Middleware
+==============================*/
 
 // Public folder middleware
 app.use(express.static(__dirname + "/public"));
 // body data middleware
 app.use(express.urlencoded({ extended: true }));
 
+
 // method override middleware
 app.use(methodOverride("_method"));
-
-// middleware to serve public as static files
 
 // Session middleware
 app.use(session({
@@ -65,7 +68,9 @@ app.use(function (req, res, next) {
   next();
 });
 
-/* ==== Routes/Controllers ==== */
+/* =========================== 
+      Routes & Controllers
+==============================*/
 
 app.use("/", controllers.auth)
 
@@ -129,7 +134,9 @@ app.put("/:id", function (req, res) {
 })
 
 
-/* ==== Server Listener ==== */
+/* =========================== 
+      Server Listener
+==============================*/
 app.listen(PORT, function () {
   console.log(`InTech application is live at http://localhost:${PORT}/`);
 });

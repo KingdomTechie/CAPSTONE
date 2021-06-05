@@ -1,7 +1,9 @@
 * {
 	box-sizing: border-box;
 }
-
+h1 {
+    padding: 10px;
+}
 h2 {
     padding: 10px;
 }

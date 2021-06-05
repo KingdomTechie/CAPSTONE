@@ -94,7 +94,7 @@ app.get("/", async function (req, res) {
 });
 
 
-app.use("/:id/edit", async function (req, res) {
+app.get("/:id/edit", async function (req, res) {
   
   await db.User.findById(req.params.id, function (err, foundUser) {
     if (err) return res.send(err)
@@ -104,6 +104,24 @@ app.use("/:id/edit", async function (req, res) {
     return res.render("edit", context)
   })
 
+})
+
+app.put("/:id", function (req, res) {
+
+  db.User.findByIdAndUpdate(
+    req.params.id,
+    {
+      $set: {
+        ...req.body,
+      },
+    },
+    {new: true},
+
+    function (err, updatedUser) {
+      if (err) return res.send(err);
+      return res.redirect("/")
+    }
+  )
 })
 
 

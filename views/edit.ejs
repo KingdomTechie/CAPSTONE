@@ -2,28 +2,32 @@
 
 <html>
     <body>
-        <h1>Edit your profile here</h1>
-
+        <h1><%=user.firstName%>, you can edit your profile here</h1>
+        <form action="/<%=user._id%>?_method=PUT" method="POST" class="register_form">
         <section class="register_right">
             <div class="mb-3">
               <label class="form-label">Desired Salary</label>
-              <input type="text" class="form-control"  aria-describedby="desiredSalary" name="desiredSalary">
+              <input type="text" class="form-control"  aria-describedby="desiredSalary" name="desiredSalary" placeholder=<%=user.desiredSalary%>>
             </div><div class="mb-3">
               <label class="form-label">Desired Industry</label>
-              <input type="text" class="form-control"  aria-describedby="desiredSalary" name="desiredIndustry">
+              <input type="text" class="form-control"  aria-describedby="desiredSalary" name="desiredIndustry" placeholder=<%=user.desiredIndustry%>>
             </div>
             <div class="mb-3">
               <label class="form-label">Desired City</label>
-              <input type="text" class="form-control"  aria-describedby="desiredSalary" name="desiredCity">
+              <input type="text" class="form-control"  aria-describedby="desiredSalary" name="desiredCity" placeholder=<%=user.desiredCity%>>
             </div>
             <div class="mb-3">
               <label class="form-label">Profile Photo</label>
-              <input type="text" class="form-control"  aria-describedby="desiredSalary" name="profileImg">
+              <input type="text" class="form-control"  aria-describedby="desiredSalary" name="profileImg" placeholder=<%=user.profileImg%>>
             </div>
             <div class="mb-3">
               <label class="form-label">Skills</label>
-              <input type="text" class="form-control"  aria-describedby="desiredSalary" name="skills">
+              <input type="text" class="form-control"  aria-describedby="desiredSalary" name="skills" placeholder=<%=user.skills%>>
             </div>
           </section>
+          <div class="register_form_button">
+            <button type="submit" class="btn btn-primary">Edit</button>
+          </div>
+        </form>
     </body>
 </html>

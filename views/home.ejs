@@ -9,14 +9,17 @@
             <aside class="user_aside">
                 <div class="profile_card">
                     <div class="card" style="width: 18rem;">
-                        <!-- <img src="..." class="card-img-top" alt="..."> -->
-                        <!-- <div class="card-body">
-                          <h5 class="card-title">User Profile Card</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div> -->
                         <ul class="list-group list-group-flush">
                             <h5>Skills</h5>
-                          <li class="list-group-item"><%=profile.skills%></li>
+
+                            <%for (let i=0; i < profile.skills.length; i++) { %>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                  <%=profile.skills[i]%>
+                                </li>
+                         <% } %>
+                              </ul>
                           <h5>Location</h5>
                           <li class="list-group-item"><%=profile.desiredCity%></li>
                           <h5>Salary</h5>

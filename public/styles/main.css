@@ -8,15 +8,24 @@ h2 {
     padding: 10px;
 }
 
+/* ---------- 
+Navbar
+--------------*/
+
 nav {
     margin: 0px
 }
 
-.profile_edit_form {
+span {
+    margin-left: 8px;
+    font-size: larger;
+}
+
+/* .profile_edit_form {
     max-width: 500px;
     padding: 30px;
     margin-left: 500px;
-}
+} */
 
 /* ---------- 
 Log in View
@@ -114,4 +123,9 @@ Homepage View if user is signed in
 
 .card_link_div {
     margin-top: 10px;
+}
+
+.company_card_photo {
+    max-width: 100%;
+    margin-bottom: 10px;
 }

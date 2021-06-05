@@ -36,6 +36,7 @@
                 <%  for (let i=0; i < joblistings.length; i++) { %>
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
+                        <img class="company_card_photo" src="<%=companies[i].companyImg%>" alt="">
                         <h5 class="card-title"><%=joblistings[i].jobTitle%></h5>
                         <h6 class="card-subtitle mb-2 text-muted"><%=companies[i].companyName%></h6><br>
                         <h6>Required Skills</h6>

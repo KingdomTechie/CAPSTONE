@@ -108,6 +108,10 @@ app.get("/:id/edit", async function (req, res) {
 
 app.put("/:id", function (req, res) {
 
+  let skill = req.body.skills.split(",");
+  req.body.skills = skill
+  console.log(req.body.skills);
+
   db.User.findByIdAndUpdate(
     req.params.id,
     {

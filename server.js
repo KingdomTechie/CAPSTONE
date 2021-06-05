@@ -82,19 +82,21 @@ app.get("/", async function (req, res) {
   const foundjobListings = await db.JobListings.find({})
 
   for (let i = 0; i < foundUser.length; i++) {
-
     if (foundUser[i]._id == req.session.currentUser.id) {
       newFoundUser = foundUser[i]
       console.log(newFoundUser);
     }
-
   }
+
   const context = {
         user: req.session.currentUser,
         profile: newFoundUser,
         companies: foundCompanies,
         joblistings: foundjobListings
       }
+
+  
+
   res.render("home", context);
 });
 

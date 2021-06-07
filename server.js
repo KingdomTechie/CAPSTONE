@@ -102,6 +102,55 @@ app.get("/", async function (req, res) {
   res.render("home", context);
 });
 
+app.get("/:id/saved", async function (req, res) {
+  
+  await db.User.findById(req.params.id, function (err, foundUser) {
+    if (err) return res.send(err)
+
+    const context = {user: foundUser}
+    console.log(req.body);
+    return res.render("savedJobs", context)
+  })
+
+})
+
+app.get("/:id/saved", async function (req, res) {
+  
+  await db.User.findById(req.params.id, function (err, foundUser) {
+    if (err) return res.send(err)
+
+    const context = {user: foundUser}
+    console.log(req.body);
+    return res.render("savedJobs", context)
+  })
+
+})
+
+app.put("/:id/saved", async function (req, res) {
+
+  console.log(req.body);
+  
+  db.User.findByIdAndUpdate(
+    req.params.id,
+    {
+      $push: {
+              savedJobs: req.body.jobId
+      },
+    },
+    {new: true},
+
+    function (err, updatedUser) {
+      if (err) return res.send(err);
+      return res.redirect(`/${updatedUser._id}/saved`)
+    }
+  )
+
+})
+
+
+
+
+
 // Route edits the user profile - presentational 
 app.get("/:id/edit", async function (req, res) {
   

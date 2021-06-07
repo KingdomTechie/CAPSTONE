@@ -4,20 +4,19 @@ const react = document.querySelector("#React")
 const companyCard = document.querySelectorAll("#companyCard").innerHTML
 const jobListingGrid = document.querySelector(".joblisting_grid")
 const userSkill = document.querySelectorAll(".list-group-item")
-const requiredSkill = document.querySelectorAll(".dropdown-item")
+const requiredSkill = document.querySelector(".dropdown-menu")
 
-console.log(jobListingGrid);
-console.log(requiredSkill);
+// console.log(jobListingGrid);
+// console.log(requiredSkill);
 
-console.log(react);
+// console.log(react);
 
 
-react.addEventListener("change", function(e) {
+// react.addEventListener("change", function(e) {
     
-    if (react.checked) {
-        console.log(react.value)
-        console.log(requiredSkill.value)
-    
-    }
-})
+//     if (react.checked) {
+//         console.log(react.value)
+//         console.log(requiredSkill.value)
+//     }
+// })
 

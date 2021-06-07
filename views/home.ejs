@@ -32,7 +32,7 @@
                           </li>
                         </ul>
                         <div class="card-body">
-                          <a href="/<%=profile._id%>/saved" class="card-link">Saved Jobs</a>
+                            <a href="/<%=profile._id%>/saved" class="card-link">Saved Jobs</a>
                           <a href="/<%=profile._id%>/edit" class="card-link">Edit Profile</a>
                         </div>
                       </div>
@@ -62,8 +62,10 @@
                         </div>
                         
                         <div class="card_link_div">
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
+                            <form action="/<%=profile._id%>/saved?_method=PUT" method=POST>
+                                <input type="hidden" value="<%=job._id%>" name="jobId">
+                                <button class="btn btn-primary" type="submit" name="savedJobs">Save this Job</button>
+                            </form>
                         </div>
                     </section>
                     </div>

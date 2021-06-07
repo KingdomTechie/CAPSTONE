@@ -82,8 +82,9 @@ app.use("/", controllers.auth)
 app.get("/", async function (req, res) {
 
   const foundUser = await db.User.find()
-  const foundCompanies = await db.Company.find({})
-  const foundjobListings = await db.JobListings.find({})
+
+  const foundjobListings = await db.JobListings.find({}).populate("company")
+ 
 
   for (let i = 0; i < foundUser.length; i++) {
     if (foundUser[i]._id == req.session.currentUser.id) {
@@ -95,7 +96,6 @@ app.get("/", async function (req, res) {
   const context = {
         user: req.session.currentUser,
         profile: newFoundUser,
-        companies: foundCompanies,
         joblistings: foundjobListings
       }
 

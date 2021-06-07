@@ -9,7 +9,7 @@ const jobListingSchema = new mongoose.Schema (
         requiredSkills: [],
         positionStatus: String,
         remote: Boolean,
-        company: [{type: mongoose.Schema.Types.ObjectId, ref: "Company"}]
+        company: {type: mongoose.Schema.Types.ObjectId, ref: "Company"}
     },
     {
         timestamps: true,

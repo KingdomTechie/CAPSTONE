@@ -42,24 +42,34 @@
 
             </aside>
             <section class="joblisting_grid">
-                <%  for (let i=0; i < joblistings.length; i++) { %>
-                <div class="card" id="companyCard" style="width: 18rem;">
-                    <div class="card-body">
-                        <div class="company_card_photo_div">
-                            <img class="company_card_photo" src=<%=companies[i].companyImg%> alt="">
+                <% joblistings.forEach(job => { %>
+                        <div class="card" id="companyCard" style="width: 18rem;">
+                            <div class="card-body">
+                                <div class="company_card_photo_div">
+                            <img class="company_card_photo" src=<%=job.company.companyImg%> alt="">
                         </div>
-                        <h5 class="card-title"><%=joblistings[i].jobTitle%></h5>
-                        <h6 class="card-subtitle mb-2 text-muted"><%=companies[i].companyName%></h6><br>
+                        <h5 class="card-title"><%=job.jobTitle%></h5>
+                        <h6 class="card-subtitle mb-2 text-muted"><%=job.company.companyName%></h6><br>
                         <h6>Required Skills</h6>
-                        <p class="card-text"><%=joblistings[i].requiredSkills%></p>
+                        <div class="btn-group">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                Required Skills
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <% job.requiredSkills.forEach(skill =>  { %>
+                                        <li class="dropdown-item"><%=skill%></li>
+                                    <%  }) %>
+                                </ul>
+                        </div>
+                        
                         <div class="card_link_div">
                             <a href="#" class="card-link">Card link</a>
                             <a href="#" class="card-link">Another link</a>
                         </div>
                     </div>
                 </div>
-                <% } %>
-            
+                <%   }) %>
+
         </div>
       <% } else { %>
         <h2>Welcome!</h2>

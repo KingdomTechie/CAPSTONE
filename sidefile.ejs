@@ -1,24 +1,29 @@
-<h6>Required Skills</h6>
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                            Required Skills
-                            </button>
-                            <ul class="dropdown-menu">
-                            <% for (j=0; j < joblistings[i].requiredSkills.length; j++){ %>
-                                    <li><a class="dropdown-item" href="#"><%=joblistings[i].requiredSkills[j]%></a></li>
-                                <%  } %>
-                            </ul>
-                        </div>
-
-
-    <h6>Required Skills</h6>
-            <div class="btn-group">
-                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                Required Skills
-                </button>
-                <ul class="dropdown-menu">
-                    <% joblistings.forEach(job =>  { %>
-                        <li class="dropdown-item"><%=job.requiredSkills%></li>
-                    <%  }) %>
-                </ul>
+<section class="joblisting_grid">
+    <% user.savedJobs.forEach(job => { %>
+            <div class="card" id="companyCard" style="width: 18rem;">
+                <div class="card-body">
+                    <div class="company_card_photo_div">
+                <img class="company_card_photo" src=<%=job.company.companyImg%> alt="">
             </div>
+            <h5 class="card-title"><%=job.jobTitle%></h5>
+            <h6 class="card-subtitle mb-2 text-muted"><%=job.company.companyName%></h6><br>
+            <!-- <h6>Required Skills</h6> -->
+            <section class="requiredSkills_cardLinks">
+            <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    Required Skills
+                    </button>
+                    <ul class="dropdown-menu">
+                        <% job.requiredSkills.forEach(skill =>  { %>
+                            <li class="dropdown-item" value=<%=skill%>><%=skill%></li>
+                        <%  }) %>
+                    </ul>
+            </div>
+            
+            <div class="card_link_div">
+                <form action="/<%=profile._id%>/saved?_method=PUT" method=POST>
+                    <input type="hidden" value="<%=job._id%>" name="jobId">
+                    <button class="btn btn-primary" type="submit" name="savedJobs">Save this Job</button>
+                </form>
+            </div>
+        </section>

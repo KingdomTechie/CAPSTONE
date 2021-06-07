@@ -72,17 +72,18 @@ app.use(function (req, res, next) {
 });
 
 
-/* =========================== 
-      Routes & Controllers
-==============================*/
+/* =====================================================================================================================
+                                                    Routes & Controllers
+========================================================================================================================*/
 
 app.use("/", controllers.auth)
 
-// Home routes
+/* =========================== 
+        Home Route
+==============================*/
 app.get("/", async function (req, res) {
 
   const foundUser = await db.User.find()
-
   const foundjobListings = await db.JobListings.find({}).populate("company")
  
 
@@ -102,24 +103,19 @@ app.get("/", async function (req, res) {
   res.render("home", context);
 });
 
+/* =========================== 
+        Saved Jobs Routes
+==============================*/
+
 app.get("/:id/saved", async function (req, res) {
+
+  const foundjobListings = await db.JobListings.find({}).populate("company")
   
   await db.User.findById(req.params.id, function (err, foundUser) {
     if (err) return res.send(err)
 
-    const context = {user: foundUser}
-    console.log(req.body);
-    return res.render("savedJobs", context)
-  })
-
-})
-
-app.get("/:id/saved", async function (req, res) {
-  
-  await db.User.findById(req.params.id, function (err, foundUser) {
-    if (err) return res.send(err)
-
-    const context = {user: foundUser}
+    const context = {user: foundUser,
+                    joblisting: foundjobListings}
     console.log(req.body);
     return res.render("savedJobs", context)
   })
@@ -143,13 +139,13 @@ app.put("/:id/saved", async function (req, res) {
       if (err) return res.send(err);
       return res.redirect(`/${updatedUser._id}/saved`)
     }
-  )
+  ).populate("joblisting")
 
 })
 
-
-
-
+/* =========================== 
+    Edit User Profile routes
+==============================*/
 
 // Route edits the user profile - presentational 
 app.get("/:id/edit", async function (req, res) {

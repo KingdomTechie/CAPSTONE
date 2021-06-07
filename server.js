@@ -7,6 +7,7 @@ const bcrypt = require("bcryptjs");
 require("dotenv").config();
 const db = require("./models")
 
+
 /* ==== Internal Modules ==== */
 const controllers = require("./controllers");
 
@@ -94,8 +95,6 @@ app.get("/", async function (req, res) {
         companies: foundCompanies,
         joblistings: foundjobListings
       }
-
-  
 
   res.render("home", context);
 });

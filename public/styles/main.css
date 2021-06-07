@@ -11,8 +11,8 @@ h2 {
     margin-left: 1%
 }
 
-/* ---------- 
-Navbar
+/* ------------ 
+     Navbar
 --------------*/
 
 nav {
@@ -30,16 +30,16 @@ span {
     margin-left: 500px;
 } */
 
-/* ---------- 
-Log in View
+/* ------------ 
+  Log in View
 --------------*/
 
 .login_form {
     padding: 10px;
 }
 
-/* ---------- 
-Register View
+/* ------------ 
+ Register View
 --------------*/
 .register_form_div {
     position: relative;
@@ -146,4 +146,8 @@ Homepage View if user is signed in
 
 .company_card_photo_div {
     margin-bottom: 20px;
+}
+
+.card_link_div {
+    margin-bottom: 0;
 }

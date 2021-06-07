@@ -12,9 +12,16 @@ const company = [
 {
     companyName: "Tapcart",
 
-    companyImg: "https://www.google.com/imgres?imgurl=https%3A%2F%2Fmma.prnewswire.com%2Fmedia%2F1167876%2FTapcart_Logo.jpg%3Fp%3Dfacebook&imgrefurl=https%3A%2F%2Fwww.prnewswire.com%2Fnews-releases%2Ftapcart-raises-10-million-in-series-a-funding-led-by-signalfire-301060441.html&tbnid=7FdgsAaUkxgYaM&vet=12ahUKEwiaxPu3-f7wAhWKmJ4KHRToAVgQMygAegUIARCfAQ..i&docid=GcZLl8nQ7w91jM&w=959&h=502&q=tapcart&ved=2ahUKEwiaxPu3-f7wAhWKmJ4KHRToAVgQMygAegUIARCfAQ",
+    companyImg: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.prnewswire.com%2Fnews-releases%2Ftapcart-raises-10-million-in-series-a-funding-led-by-signalfire-301060441.html&psig=AOvVaw1i1JIFjdxWyamRVG23Pvj5&ust=1623124285791000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLC4lKnPhPECFQAAAAAdAAAAABAD",
 
     companyBio: "The Tapcart platform enables ecommerce brands to launch beautifully designed mobile apps at a fraction of the price and within a fraction of the time.acebook, Inc., is an American multinational technology conglomerate based in Menlo Park, California."
+},
+{
+    companyName: "Amazon",
+
+    companyImg: "https://variety.com/wp-content/uploads/2018/01/amazon-logo.jpg",
+
+    companyBio: "Amazon.com, Inc. is an American multinational technology company based in Seattle, Washington, which focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence."
 },
 ]
 
@@ -36,7 +43,16 @@ const jobListings = [{
     requiredSkills: ["Python", "Node.js", "Express.js", "Debugging skills"],
     postionStatus: "Full-time",
     remote: true,
-    company: "Facebook",
+    company: "Tapcart",
+},
+{
+    salaryMinRange: 80000,
+    salaryMaxRange: 120000,
+    jobTitle: "Solutions Architect",
+    requiredSkills: ["Python", "Node.js", "AWS Solutions Architect Associate"],
+    postionStatus: "Full-time",
+    remote: true,
+    company: "Amazon",
 }
 ]
 

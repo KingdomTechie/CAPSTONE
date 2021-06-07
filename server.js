@@ -54,6 +54,7 @@ app.use(function (req, res, next) {
   next()
 })
 
+
 // authRequried middleware
 const authRequired = function (req, res, next) {
   if(req.session.currentUser) {
@@ -62,12 +63,14 @@ const authRequired = function (req, res, next) {
   return res.redirect("/login")
 }
 
+
 // Logger Middleware - Helper tool
 app.use(function (req, res, next) {
   console.log(req.session);
   console.log(`${req.method} - ${req.url}`);
   next();
 });
+
 
 /* =========================== 
       Routes & Controllers
@@ -99,7 +102,7 @@ app.get("/", async function (req, res) {
   res.render("home", context);
 });
 
-
+// Route edits the user profile - presentational 
 app.get("/:id/edit", async function (req, res) {
   
   await db.User.findById(req.params.id, function (err, foundUser) {
@@ -112,6 +115,7 @@ app.get("/:id/edit", async function (req, res) {
 
 })
 
+// Route that updates the database
 app.put("/:id", function (req, res) {
 
   let skill = req.body.skills.split(",");
@@ -138,6 +142,7 @@ app.put("/:id", function (req, res) {
 /* =========================== 
       Server Listener
 ==============================*/
+
 app.listen(PORT, function () {
   console.log(`InTech application is live at http://localhost:${PORT}/`);
 });

@@ -15,7 +15,7 @@
                             <ul class="list-group">
                                 <%for (let i=0; i < profile.skills.length; i++) { %>
                                 <li class="list-group-item">
-                                  <input class="form-check-input me-1" type="checkbox" id=<%=profile.skills[i]%> value="" aria-label="...">
+                                  <input class="form-check-input me-1" type="checkbox" id=<%=profile.skills[i]%> value="<%=profile.skills[i]%>" aria-label="...">
                                   <%=profile.skills[i]%>
                                 </li>
                          <% } %>
@@ -32,14 +32,12 @@
                           </li>
                         </ul>
                         <div class="card-body">
-                          <a href="#" class="card-link">Card link</a>
+                          <a href="/<%=profile._id%>/saved" class="card-link">Saved Jobs</a>
                           <a href="/<%=profile._id%>/edit" class="card-link">Edit Profile</a>
                         </div>
                       </div>
                     
                 </div>
-
-
             </aside>
             <section class="joblisting_grid">
                 <% joblistings.forEach(job => { %>
@@ -50,14 +48,15 @@
                         </div>
                         <h5 class="card-title"><%=job.jobTitle%></h5>
                         <h6 class="card-subtitle mb-2 text-muted"><%=job.company.companyName%></h6><br>
-                        <h6>Required Skills</h6>
+                        <!-- <h6>Required Skills</h6> -->
+                        <section class="requiredSkills_cardLinks">
                         <div class="btn-group">
                                 <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                 Required Skills
                                 </button>
                                 <ul class="dropdown-menu">
                                     <% job.requiredSkills.forEach(skill =>  { %>
-                                        <li class="dropdown-item"><%=skill%></li>
+                                        <li class="dropdown-item" value=<%=skill%>><%=skill%></li>
                                     <%  }) %>
                                 </ul>
                         </div>
@@ -66,10 +65,11 @@
                             <a href="#" class="card-link">Card link</a>
                             <a href="#" class="card-link">Another link</a>
                         </div>
+                    </section>
                     </div>
                 </div>
                 <%   }) %>
-
+            </section>
         </div>
       <% } else { %>
         <h2>Welcome!</h2>

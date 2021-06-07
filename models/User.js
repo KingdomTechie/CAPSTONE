@@ -17,7 +17,8 @@ const userSchema = new mongoose.Schema (
         bio: String,
         jobStatus: String,
         educationStatus: String,
-        skills: []
+        skills: [],
+        savedJobs: [{type: mongoose.Schema.Types.ObjectId, ref: "JobListings"}]
     },
     {
         timestamps: true,

@@ -137,10 +137,18 @@ app.put("/:id/saved", async function (req, res) {
 
     function (err, updatedUser) {
       if (err) return res.send(err);
-      return res.redirect(`/${updatedUser._id}/saved`)
+      return res.redirect(`/`)
     }
   ).populate("joblisting")
+})
 
+app.delete("/:id/saved", async function (req, res) {
+
+  const foundUser = await db.User.findById(req.params.id)
+  foundUser.savedJobs.splice(req.body.savedJobIndex, 1)
+  foundUser.save()
+
+  return res.redirect(`/${foundUser._id}/saved`)
 })
 
 /* =========================== 

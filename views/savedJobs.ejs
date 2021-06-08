@@ -3,26 +3,25 @@
 <html>
     <body>
         <h1>Saved Jobs here</h1>
+        <section class="joblisting_grid">
         <% joblisting.forEach(joblisting => { %>
-            <% user.savedJobs.forEach(job => { %>
+            <% user.savedJobs.forEach((job, index) => { %>
                 <% if (`${joblisting._id}` == `${job._id}`) { %>
-                    <p>We have a match!, <%=job._id%>, <%=joblisting.jobTitle%></p>
-
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" id="companyCard" style="width: 18rem;">
                         <img src="<%=joblisting.company.companyImg%>" class="card-img-top" alt="...">
                         <div class="card-body">
                           <h5 class="card-title"><%=joblisting.jobTitle%></h5>
                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                         
-                          <form action="">
+                          <form action="/<%=user._id%>/saved?_method=DELETE" method=POST>
+                            <input type="hidden" value=<%=index%> name="savedJobIndex">
                               <button class="btn btn-danger">Delete this job</button>
                           </form>
                         </div>
                       </div>
-
-             <%   } %>
-               <% }) %>
-            <% }) %>
+                      <%   } %>
+                    <% }) %>
+                <% }) %>
+        </section>
 
         
 

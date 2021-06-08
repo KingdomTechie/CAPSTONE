@@ -118,7 +118,7 @@ app.get("/:id/saved", async function (req, res) {
                     joblisting: foundjobListings}
     console.log(req.body);
     return res.render("savedJobs", context)
-  })
+  }).populate("savedJobs").populate("company")
 
 })
 

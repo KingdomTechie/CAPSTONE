@@ -21,7 +21,7 @@ router.post("/register", async function(req, res) {
 
     try {
     if (foundUser) {
-        return res.redirect("/home")
+        return res.redirect("/login")
     }
 
     // this hashes out the password so that it's encrypted in the database
@@ -37,7 +37,7 @@ router.post("/register", async function(req, res) {
 
     const newUser = await db.User.create(req.body)
    
-    return res.redirect("/home")
+    return res.redirect("/login")
 
     } catch(err) {
         console.log(err);
@@ -66,7 +66,6 @@ router.post("/login", async function(req, res) {
         id: foundUser._id,
         username: foundUser.username
     }
-
     return res.redirect("/home")
 
     } catch(err) {

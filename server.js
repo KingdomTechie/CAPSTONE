@@ -89,22 +89,23 @@ app.get("/", function (req, res) {
 
 app.get("/home", async function (req, res) {
 
-  const foundUser = await db.User.find()
+  try {
+  const foundUser = await db.User.findById(req.session.currentUser.id)
   const foundjobListings = await db.JobListings.find({}).populate("company")
 
-  for (let i = 0; i < foundUser.length; i++) {
-    if (foundUser[i]._id == req.session.currentUser.id) {
-      newFoundUser = foundUser[i]
-      console.log(newFoundUser);
-    }
-  }
+  
   const context = {
         user: req.session.currentUser,
-        profile: newFoundUser,
+        profile: foundUser,
         joblistings: foundjobListings
       }
 
   res.render("home", context);
+
+    } catch (err) {
+      console.log(err);
+      return res.send(err);
+    }
 });
 
 /* =========================== 

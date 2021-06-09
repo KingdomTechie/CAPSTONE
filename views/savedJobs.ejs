@@ -10,8 +10,8 @@
                     <div class="card" id="companyCard" style="width: 18rem;">
                       <div class="card-body">
                         <img src="<%=joblisting.company.companyImg%>" class="card-img-top" alt="...">
-                          <h5 class="card-title"><%=joblisting.jobTitle%></h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <h5 class="card-title-save"><%=joblisting.jobTitle%></h5>
+                          <p class="card-text"><%=joblisting.jobDescription%></p>
                           <form action="/<%=user._id%>/saved?_method=DELETE" method=POST>
                             <input type="hidden" value=<%=index%> name="savedJobIndex">
                               <button class="btn btn-danger">Delete this job</button>

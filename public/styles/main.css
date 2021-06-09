@@ -25,12 +25,6 @@ span {
     font-size: larger;
 }
 
-/* .profile_edit_form {
-    max-width: 500px;
-    padding: 30px;
-    margin-left: 500px;
-} */
-
 /* ------------ 
   Log in View
 --------------*/
@@ -136,13 +130,7 @@ Homepage View if user is signed in
 }
 
 .profile_card {
-    /* 
-    height: 50vh;
-    background-color: #0D6EFD;
-    padding: 10px;
-    margin-top: 8px;
-    border-radius: 10px;
-    color: white; */
+    
     max-width: 300px;
     position: absolute;
     margin-left: 7px;
@@ -191,6 +179,13 @@ Homepage View if user is signed in
 
 .card_link_div {
     margin-bottom: 0;
+}
+
+/* --------------------- 
+   Saved Jobs view
+-----------------------*/
+.card-title-save {
+    padding: 10px;
 }
 
 

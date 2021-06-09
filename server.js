@@ -47,7 +47,6 @@ app.use(session({
     maxAge: 1000 * 60 * 60 * 24 * 7 // One week cookie age
   }
 }))
-
 // this adds user credentials to all ejs files
 app.use(function (req, res, next) {
   app.locals.user = req.session.currentUser;

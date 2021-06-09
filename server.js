@@ -19,7 +19,7 @@ const app = express();
 ==============================*/
 
 // use the env port OR the port 4000
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
 
 // EJS is the view engine.  Will need it for views
 app.set("view engine", "ejs");
@@ -101,8 +101,6 @@ app.get("/home", async function (req, res) {
     
     }
   }
-  
-
   const context = {
         user: req.session.currentUser,
         profile: newFoundUser,

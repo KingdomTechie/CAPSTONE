@@ -156,7 +156,7 @@ Homepage View if user is signed in
 /* --------------------- 
    Error message CSS
 -----------------------*/
-.passwordError_div {
+.error_div {
 
     width: 400px;
     margin-left: 40%;

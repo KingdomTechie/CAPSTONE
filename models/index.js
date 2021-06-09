@@ -3,7 +3,7 @@ require("dotenv").config()
 const dbUrl = process.env.MONGODB_URI //"mongodb://localhost:27017/intech";
 
 mongoose
-    .connect(dbUrl, {
+    .connect(process.env.MONGODB_URI || dbUrl, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useCreateIndex: true,

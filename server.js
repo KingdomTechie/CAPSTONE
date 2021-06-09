@@ -39,7 +39,7 @@ app.use(methodOverride("_method"));
 
 // Session middleware
 app.use(session({
-  store: MongoStore.create({mongoUrl: "mongodb://localhost:27017/intech"}),
+  store: MongoStore.create({mongoUrl: process.env.MONGODB_URI}),
   secret: "Super Secret Waffles",
   reseave: false,
   saveUninitialized: false,

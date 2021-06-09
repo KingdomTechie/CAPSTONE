@@ -12,6 +12,10 @@ h2 {
     margin-left: 1%
 }
 
+h5 {
+    font-weight: bold;
+}
+
 /* ------------ 
      Navbar
 --------------*/
@@ -141,6 +145,10 @@ Homepage View if user is signed in
     border-radius: 100%;
     margin-bottom: 10%;
     margin-left: 10%;
+}
+
+#home_anchors {
+    margin-left: 14%;
 }
 
 .joblisting_grid {

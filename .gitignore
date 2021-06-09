@@ -1,6 +1,7 @@
 node_modules
 sidefile.ejs
 package-lock.json
+.env
 
 
 

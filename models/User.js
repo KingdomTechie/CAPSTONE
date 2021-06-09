@@ -30,4 +30,4 @@ const User = mongoose.model("User", userSchema);
 
 module.exports = User;
 
-{ $split: [ "Hello World", " " ] }
+// { $split: [ "Hello World", " " ] }

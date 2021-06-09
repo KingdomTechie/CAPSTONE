@@ -21,7 +21,7 @@ router.post("/register", async function(req, res) {
 
     try {
     if (foundUser) {
-        return res.redirect("/login")
+        return res.redirect("/home")
     }
 
     // this hashes out the password so that it's encrypted in the database

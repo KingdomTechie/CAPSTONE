@@ -7,6 +7,7 @@ h1 {
 }
 h2 {
     padding: 10px;
+    margin-left: -2%;
 }
 #welcome {
     margin-left: 1%
@@ -42,6 +43,7 @@ span {
 --------------*/
 .register_form_div {
     position: relative;
+    margin-left: 37%;
 }
 
 .register_form {

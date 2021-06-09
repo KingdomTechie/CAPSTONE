@@ -6,9 +6,13 @@
         <% if (user) { %>
             <h2 id="welcome">Welcome <%= user.username %></h2>
             <div class="profile_page">
-            <aside class="user_aside">
-                <div class="profile_card">
-                    <img src=<%=profile.profileImg%> class="card-img-top" id="profile_card_image" alt="...">
+                <aside class="user_aside">
+                    <div class="profile_card">
+                        <img src=<%=profile.profileImg%> class="card-img-top" id="profile_card_image" alt="...">
+                        <div class="card-body">
+                            <a href="/<%=profile._id%>/saved" class="card-link">Saved Jobs</a>
+                          <a href="/<%=profile._id%>/edit" class="card-link">Edit Profile</a>
+                        </div>
                     <div class="card" style="width: 18rem;">
                         <ul class="list-group list-group-flush">
                             <h5>Skills</h5>
@@ -31,10 +35,6 @@
                             <input class="form-check-input me-1" type="checkbox"><%=profile.desiredIndustry%>
                           </li>
                         </ul>
-                        <div class="card-body">
-                            <a href="/<%=profile._id%>/saved" class="card-link">Saved Jobs</a>
-                          <a href="/<%=profile._id%>/edit" class="card-link">Edit Profile</a>
-                        </div>
                       </div>
                     
                 </div>

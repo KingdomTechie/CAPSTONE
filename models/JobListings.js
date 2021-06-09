@@ -6,6 +6,7 @@ const jobListingSchema = new mongoose.Schema (
         salaryMinRange: Number,
         salaryMaxRange: Number,
         jobTitle: String,
+        jobDescription: String,
         requiredSkills: [],
         positionStatus: String,
         remote: Boolean,

@@ -80,28 +80,29 @@ Homepage View if user not signed in
 ---------------------*/
 
 .welcome_div {
-    font-family: 'IBM Plex Sans', sans-serif;
+    /* font-family: 'IBM Plex Sans', sans-serif; */
     position: relative;
     display: flex;
     margin-left: 40%;
     /* border-style: solid; */
     width: 500px;
-    height: 236px;
-    margin-top: 17%;
+    height: 275px;
+    margin-top: 10%;
 }
 
 #welcome_intech {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
 }
 .welcome_graphic {
     position: absolute;
+    margin-left: -7%;
 }
 .welcome_card {
     position: relative;
     font-size: x-large;
     width: 200px;
-    margin-left: 245px;
+    margin-left: 260px;
     text-align: center;
     margin-top: 7%;
 }
@@ -112,8 +113,8 @@ Homepage View if user not signed in
     flex-wrap: wrap;
     width: 200px;
     justify-content: space-between;
-    margin-top: 33%;
-    margin-left: 51%;
+    margin-top: 35%;
+    margin-left: 53%;
 }
 
 
@@ -135,8 +136,6 @@ Homepage View if user is signed in
 }
 
 .profile_card {
-
-    
     /* 
     height: 50vh;
     background-color: #0D6EFD;

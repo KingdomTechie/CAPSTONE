@@ -44,10 +44,10 @@
                         <div class="card" id="companyCard" style="width: 18rem;">
                             <div class="card-body">
                                 <div class="company_card_photo_div">
-                            <img class="company_card_photo" src=<%=job.company.companyImg%> alt="">
-                        </div>
-                        <h5 class="card-title"><%=job.jobTitle%></h5>
-                        <h6 class="card-subtitle mb-2 text-muted"><%=job.company.companyName%></h6><br>
+                                    <img class="company_card_photo" src=<%=job.company.companyImg%> alt="">
+                                </div>
+                            <h5 class="card-title"><%=job.jobTitle%></h5>
+                            <h6 class="card-subtitle mb-2 text-muted"><%=job.company.companyName%></h6><br>
                         <!-- <h6>Required Skills</h6> -->
                         <section class="requiredSkills_cardLinks">
                         <div class="btn-group">
@@ -60,7 +60,6 @@
                                     <%  }) %>
                                 </ul>
                         </div>
-                        
                         <div class="card_link_div">
                             <form action="/<%=profile._id%>/saved?_method=PUT" method=POST>
                                 <input type="hidden" value="<%=job._id%>" name="jobId">

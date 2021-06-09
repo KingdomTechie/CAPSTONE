@@ -193,7 +193,7 @@ app.put("/:id", function (req, res) {
 
     function (err, updatedUser) {
       if (err) return res.send(err);
-      return res.redirect("/")
+      return res.redirect("/home")
     }
   )
 })

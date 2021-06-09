@@ -1,5 +1,6 @@
 * {
 	box-sizing: border-box;
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 h1 {
     padding: 10px;
@@ -72,6 +73,47 @@ Homepage View if user not signed in
 ---------------------------------*/
 .welcome_div {
     padding: 10px;
+}
+
+/* ------------------- 
+    Landing Page
+---------------------*/
+
+.welcome_div {
+    font-family: 'IBM Plex Sans', sans-serif;
+    position: relative;
+    display: flex;
+    margin-left: 40%;
+    /* border-style: solid; */
+    width: 500px;
+    height: 236px;
+    margin-top: 17%;
+}
+
+#welcome_intech {
+    width: 200px;
+    height: 200px;
+}
+.welcome_graphic {
+    position: absolute;
+}
+.welcome_card {
+    position: relative;
+    font-size: x-large;
+    width: 200px;
+    margin-left: 245px;
+    text-align: center;
+    margin-top: 7%;
+}
+
+.welcome_anchors {
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+    width: 200px;
+    justify-content: space-between;
+    margin-top: 33%;
+    margin-left: 51%;
 }
 
 

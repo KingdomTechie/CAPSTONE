@@ -37,7 +37,6 @@ router.post("/register", async function(req, res) {
 
     const newUser = await db.User.create(req.body)
    
-
     return res.redirect("/login")
 
     } catch(err) {
@@ -59,12 +58,12 @@ router.post("/login", async function(req, res) {
     const foundUser = await db.User.findOne({email: req.body.email})
     if(!foundUser) return res.redirect("/register");
     const doesMatch = await bcrypt.compare(req.body.password, foundUser.password);
-    if (!doesMatch) return res.send("Password invalid")
+    if (!doesMatch) return res.render("errors/passwordError")
     req.session.currentUser = {
         id: foundUser._id,
         username: foundUser.username
     }
-    return res.redirect("/")
+    return res.redirect("/home")
     } catch(err) {
         console.log(err);
         res.send(err)

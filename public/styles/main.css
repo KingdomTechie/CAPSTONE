@@ -151,3 +151,14 @@ Homepage View if user is signed in
 .card_link_div {
     margin-bottom: 0;
 }
+
+
+/* --------------------- 
+   Error message CSS
+-----------------------*/
+.passwordError_div {
+
+    width: 400px;
+    margin-left: 40%;
+    margin-top: 10%;
+}

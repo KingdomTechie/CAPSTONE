@@ -81,7 +81,14 @@ app.use("/", controllers.auth)
 /* =========================== 
         Home Route
 ==============================*/
-app.get("/", async function (req, res) {
+
+app.get("/", function (req, res) {
+  return res.render("landing")
+})
+
+
+
+app.get("/home", async function (req, res) {
 
   const foundUser = await db.User.find()
   const foundjobListings = await db.JobListings.find({}).populate("company")
@@ -91,8 +98,10 @@ app.get("/", async function (req, res) {
     if (foundUser[i]._id == req.session.currentUser.id) {
       newFoundUser = foundUser[i]
       console.log(newFoundUser);
+    
     }
   }
+  
 
   const context = {
         user: req.session.currentUser,

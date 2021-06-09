@@ -91,13 +91,11 @@ app.get("/home", async function (req, res) {
 
   const foundUser = await db.User.find()
   const foundjobListings = await db.JobListings.find({}).populate("company")
- 
 
   for (let i = 0; i < foundUser.length; i++) {
     if (foundUser[i]._id == req.session.currentUser.id) {
       newFoundUser = foundUser[i]
       console.log(newFoundUser);
-    
     }
   }
   const context = {

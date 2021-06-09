@@ -9,7 +9,7 @@ const company = [
 },
 {
     companyName: "Tapcart",
-    companyImg: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.prnewswire.com%2Fnews-releases%2Ftapcart-raises-10-million-in-series-a-funding-led-by-signalfire-301060441.html&psig=AOvVaw1i1JIFjdxWyamRVG23Pvj5&ust=1623124285791000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLC4lKnPhPECFQAAAAAdAAAAABAD",
+    companyImg: "https://mma.prnewswire.com/media/1167876/Tapcart_Logo.jpg?p=publish",
     companyBio: "The Tapcart platform enables ecommerce brands to launch beautifully designed mobile apps at a fraction of the price and within a fraction of the time.acebook, Inc., is an American multinational technology conglomerate based in Menlo Park, California."
 },
 {

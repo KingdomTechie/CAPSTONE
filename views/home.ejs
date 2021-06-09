@@ -17,12 +17,15 @@
                         <ul class="list-group list-group-flush">
                             <h5>Skills</h5>
                             <ul class="list-group">
+                                <form action="">
                                 <%for (let i=0; i < profile.skills.length; i++) { %>
                                 <li class="list-group-item">
-                                  <input class="form-check-input me-1" type="checkbox" id=<%=profile.skills[i]%> value="<%=profile.skills[i]%>" aria-label="...">
+                                  <input name="skills" class="form-check-input me-1" type="checkbox" id=<%=profile.skills[i]%> value="<%=profile.skills[i]%>" aria-label="...">
                                   <%=profile.skills[i]%>
                                 </li>
-                         <% } %>
+                                <% } %>
+                                <li><input type="submit" value="Save Checked Skills"></li>
+                            </form>
                               </ul>
                           <h5>Location</h5>
                           <li class="list-group-item">

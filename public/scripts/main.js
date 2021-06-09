@@ -12,11 +12,11 @@ const requiredSkill = document.querySelector(".dropdown-menu")
 // console.log(react);
 
 
-// react.addEventListener("change", function(e) {
+react.addEventListener("change", function(e) {
     
-//     if (react.checked) {
-//         console.log(react.value)
-//         console.log(requiredSkill.value)
-//     }
-// })
+    if (react.checked) {
+        console.log(react.value)
+        console.log(requiredSkill.value)
+    }
+})
 

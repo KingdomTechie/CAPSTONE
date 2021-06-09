@@ -3,7 +3,7 @@ require("dotenv").config()
 const dbUrl = process.env.MONGODB_URI //"mongodb://localhost:27017/intech";
 
 mongoose
-    .connect(process.env.MONGODB_URI || dbUrl, {
+    .connect(dbUrl, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useCreateIndex: true,
@@ -27,5 +27,3 @@ module.exports = {
     JobListings: require("./JobListings"),
     Company: require("./Company")
 }
-
-

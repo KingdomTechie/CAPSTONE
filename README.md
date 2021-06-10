@@ -42,9 +42,9 @@ const MongoStore = require("connect-mongo")
 
 **Who are my users**: My target audience are software engineers (junior, associate or senior) that are looking for their next career opportunity.  I have found that traditional job search websites have to include a wide demographic of users.  I want a service that is solely dedicated to Software Engineers and companies that are looking for them.  
 
-**What do they want**:  My software engineer users want a job searching service where they can have a much more focused experience.  With this service they will be able to showcase their skills, projects, and desires.  On the other hand, companies that are using the service will be able to quickly and efficiently search for talent to exact specifications.
+**What do they want**:  Software engineer users want a job searching service where they can have a much more focused experience.  With this service they will be able to showcase their skills, projects, and desires.  On the other hand, companies that are using the service will be able to quickly and efficiently search for talent to exact specifications.
 
-**Why**: I am a software engineer and I have found that the quality of mainstream job searching websites did not cater enough to my skill set and search queries.  For example, I’d like to check in what skills I have, how long I have had them, and then be able to search for companies that match exactly what I have to offer.  I want to find companies that are looking for exactly what I have offer.The Software Engineering workforce stood at over 680,000 workers in the field in the United States.  
+**Why**: I am a software engineer and I have found that the quality of mainstream job searching websites did not cater enough to my skill set and search queries.  For example, I’d like to check in what skills I have, how long I have had them, and then be able to search for companies that match exactly what I have to offer. The Software Engineering workforce stood at over 680,000 workers in the field in the United States.  
 
 ### 1.2 - Sign Up 
 
@@ -52,7 +52,11 @@ const MongoStore = require("connect-mongo")
 
 ### 1.3 - Profile Page
 
-**Profile Page** Once the user is signed in, they can immediately see jobs that are available.  On the left navigation bar, they are able to sort through the jobs by using selectors located in the left navigation bar.  
+**Home Page** Once the user is signed in, they can immediately see jobs that are available.  On the left navigation bar, they are able to sort through the jobs by using selectors located in the left navigation bar (search feature is coming soon).  They are able to edit their profile as needed on this page.  
+
+### 1.4 - Saved Jobs
+
+**Home Page** The user can navigate to their "Saved Jobs" page and review the jobs they found interesting.  They also can delete those jobs from their profile.  
 
 ## Wireframes
 <img src="https://share.balsamiq.com/c/i6Dph9ERL7TeovdpY1F95A.png">  

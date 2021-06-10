@@ -73,5 +73,7 @@ const MongoStore = require("connect-mongo")
 
 ## Future features or unresolved problems
 
-Work in progress...
+- API connection or officially create an API for businesses to advertise their job openings.  
+
+- Full search functionality - slice and dice the data in all ways
 

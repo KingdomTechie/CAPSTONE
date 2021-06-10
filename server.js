@@ -92,12 +92,16 @@ app.get("/home", async function (req, res) {
   try {
   const foundUser = await db.User.findById(req.session.currentUser.id)
   const foundjobListings = await db.JobListings.find({}).populate("company")
+  const queries = req.query
+  console.log(queries);
+
 
   
   const context = {
         user: req.session.currentUser,
         profile: foundUser,
-        joblistings: foundjobListings
+        joblistings: foundjobListings,
+        queries: queries
       }
 
   res.render("home", context);
@@ -121,6 +125,7 @@ app.get("/:id/saved", async function (req, res) {
 
     const context = {user: foundUser,
                     joblisting: foundjobListings}
+
     console.log(req.body);
     return res.render("savedJobs", context)
   }).populate("savedJobs").populate("company")
@@ -194,7 +199,7 @@ app.put("/:id", function (req, res) {
       return res.redirect("/home")
     }
   )
-})
+});
 
 
 /* =========================== 

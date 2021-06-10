@@ -44,8 +44,6 @@ router.post("/register", async function(req, res) {
         return res.render("errors/registrationError")
     }
 });
-
-
 router.get("/login", function(req, res) {
     res.render("auth/login")
 });

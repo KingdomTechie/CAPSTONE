@@ -191,6 +191,15 @@ Homepage View if user is signed in
     margin-bottom: 0;
 }
 
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.requiredSkills_cardLinks {
+    margin-top: auto;
+}
+
 /* --------------------- 
    Saved Jobs view
 -----------------------*/

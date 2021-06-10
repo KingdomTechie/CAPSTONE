@@ -22,6 +22,16 @@ const company = [
     companyImg: "https://storage.googleapis.com/gd-wagtail-prod-assets/original_images/evolving_google_identity_2x1.jpg",
     companyBio: "Google LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, a search engine, cloud computing, software, and hardware."
 },
+{
+    companyName: "Activision",
+    companyImg: "https://www.baystreet.ca/images/articlegroups/original/17/private/activision.jpg",
+    companyBio: "Activision Publishing, Inc. is an American video game publisher based in Santa Monica, California. It currently serves as the publishing business for its parent company, Activision Blizzard, and consists of several subsidiary studios."
+},
+{
+    companyName: "AT&T",
+    companyImg: "https://www.cordcuttersnews.com/wp-content/uploads/2019/09/ATT-logo.png",
+    companyBio: "AT&T Inc. is an American multinational conglomerate holding company, Delaware-registered but headquartered at Whitacre Tower in Downtown Dallas, Texas. It is the world’s largest telecommunications company, and the second largest provider of mobile telephone services."
+}
 ]
 
 
@@ -65,6 +75,26 @@ const jobListings = [{
     postionStatus: "Full-time",
     remote: true,
     company: "Google",
+},
+{
+    salaryMinRange: 80000,
+    salaryMaxRange: 120000,
+    jobTitle: "Junior Network Programmer",
+    jobDescription: "Activision Central Tech is seeking talented junior programmers to join its 2-year rotational engineering program within its online services teams.",
+    requiredSkills: ["C++", "Java", "Python"],
+    postionStatus: "Full-time",
+    remote: true,
+    company: "Activision",
+},
+{
+    salaryMinRange: 80000,
+    salaryMaxRange: 120000,
+    jobTitle: "Junior Software Engineer",
+    jobDescription: "AT&T Mobility & Entertainment is looking for a forward-thinking, innovative and unusually talented developer to join us in our El Segundo, CA offices. This position will work in an agile organization, developing, releasing and supporting the platform that supports AT&T TV, AT&T’s next generation linear TV product.",
+    requiredSkills: ["C++", "Java", "Python"],
+    postionStatus: "Full-time",
+    remote: true,
+    company: "AT&T",
 }
 ]
 

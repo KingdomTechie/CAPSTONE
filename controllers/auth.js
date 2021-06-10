@@ -30,7 +30,7 @@ router.post("/register", async function(req, res) {
     req.body.password = hash;
 
     
-    // This section converts the "skills" data coming from the form into separate strings 
+    // Proud Code: This section converts the "skills" data coming from the form into separate strings 
     let skill = req.body.skills.split(",");
     req.body.skills = skill
     console.log(req.body.skills);

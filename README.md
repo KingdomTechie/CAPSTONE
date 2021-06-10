@@ -6,10 +6,13 @@ Mainstream job seeking applications like Indeed, LinkedIn and ZipRecruiter have 
 
 ## Technologies Used
 
-- MongoDB
-- Mongoose
-- Express
-- Node.JS
+- MongoDB - NoSQL Database
+
+- Mongoose - Object Data Modeling (ODM) library that manages the relationship between data.  The language to communicate with the database.
+
+- Express - Backend web application framework to work with Node.JS
+
+- Node.JS - Backend JavaScript runtime environment; allows for JavaScript code to be executed outside of the web browser.  
 
 ## Install these dependencies
 
@@ -40,7 +43,7 @@ const MongoStore = require("connect-mongo")
 
 ### Who, What, Why
 
-**Who are my users**: My target audience are software engineers (junior, associate or senior) that are looking for their next career opportunity.  I have found that traditional job search websites have to include a wide demographic of users.  I want a service that is solely dedicated to Software Engineers and companies that are looking for them.  
+**Who are my users**: My target audience are software engineers (junior, associate or senior) that are looking for their next career opportunity.  The software is also targeted towards businesses that need to hire software engineers.  I have found that traditional job search websites have to include a wide demographic of users.  I want a service that is solely dedicated to Software Engineers and companies that are looking for them.  
 
 **What do they want**:  Software engineer users want a job searching service where they can have a much more focused experience.  With this service they will be able to showcase their skills, projects, and desires.  On the other hand, companies that are using the service will be able to quickly and efficiently search for talent to exact specifications.
 
